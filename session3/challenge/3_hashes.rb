@@ -5,4 +5,10 @@
 # No punctuation will appear in the strings.
 #
 # Example:
-# word_count "The dog and the cat" # => {"the" => 2, "dog" => 1, "and" => 1, "cat" => 1}
+# word_count  # => {"the" => 2, "dog" => 1, "and" => 1, "cat" => 1}
+
+def word_count (string)
+  words = Hash.new {0}
+    string.split.each {|x| words[x.downcase] += 1}
+    words
+  end
