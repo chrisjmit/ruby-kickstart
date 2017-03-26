@@ -11,8 +11,12 @@
 
 def alternate_words(sentence)
 
-sentence.gsub!(/^a-zA-Z,0-9/, " ")
+#sentence.gsub!(/^a-zA-Z,0-9/, " ")
 
-sentence.select.each_with_index {|x,y| y.odd?}
+  '!@$#%^&*()-=_+[]:;,./<>?\\|'.split(//).each do |ch|
+    sentence = sentence.gsub(ch, ' ')
+  end
+
+sentence.split(" ").select.each_with_index {|x,y| y.even?}
 
 end
