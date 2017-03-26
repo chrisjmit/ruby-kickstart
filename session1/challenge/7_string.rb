@@ -5,6 +5,9 @@
 # pirates_say_arrrrrrrrr("Pirates say arrrrrrrrr")        # => "arrrrrrrr"
 
 def pirates_say_arrrrrrrrr(string)
-string.split
+
+
+
+#string.chars.select.each_with_index{|x,y| return x[y+1] if x == "r"}.join
 
 end

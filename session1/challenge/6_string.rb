@@ -9,12 +9,16 @@
 
 def odds_and_evens(string, return_odds)
 
-  a = string.split("").map!{|x| x.even ? x : "" }
-  b = string.split("").map!{|x| x.even ? x : "" }
+index = 1
 
-return a if return_odds == true
-return b if return_odds == false
+  (string.length/2).times do
+    string.slice(index)
+    index += 1
+    string
+    end
 
 
+#return string.chars.select.each_with_index{|x, y| y.odd?}.join if return_odds == true
+#return string.chars.select.each_with_index{|x, y| y.even?}.join if return_odds == false
 
 end
